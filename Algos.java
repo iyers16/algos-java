@@ -1,5 +1,11 @@
 import java.util.Arrays;
 
+/*
+ * - Best case (lower bound, big Omega): the input array is already sorted in increasing order
+ * - Average case (Theta): the input array is unsorted
+ * - Worst case (upper bound, big O): the input array is so unsorted it is in descending order
+ */
+
 public class Algos {
     public static void selectionSort(int[] arr) {
         printArray(arr);
