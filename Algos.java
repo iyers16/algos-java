@@ -29,6 +29,19 @@ public class Algos {
         printArray(arr);
     }
 
+    public static void insertionSort(int[] arr) {
+        printArray(arr);
+        for (int i = 1; i < arr.length; ++i) {
+            int value = arr[i];
+            int j;
+            for (j = i; (j > 0) && (arr[j - 1] > value); --j) {
+                arr[j] = arr[j - 1];
+            }
+            arr[j] = value;
+        }
+        printArray(arr);
+    }
+
     public static void swap(int[] arr, int indexA, int indexB) {
         int tmp = arr[indexA];
         arr[indexA] = arr[indexB];
@@ -47,9 +60,9 @@ public class Algos {
     public static boolean isSorted(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             if (arr[i] > arr[i + 1]) {
-                return false; // Return false if an element is greater than the next one
+                return false;
             }
         }
-        return true; // Return true if no such element is found
+        return true;
     }
 }
