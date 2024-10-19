@@ -8,7 +8,7 @@ public class Main {
                 .limit(10)
                 .toArray();
         // Algos.selectionSort(unsortedArray);
-        // Algos.bubbleSort(unsortedArray);
-        Algos.insertionSort(unsortedArray);
+        Algos.bubbleSort(unsortedArray);
+        // Algos.insertionSort(unsortedArray);
     }
 }

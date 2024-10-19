@@ -28,6 +28,22 @@ Ex: [5, 4, 3, 2, 1]
 
 Selection sort works by having an ephemeral partition between the sorted and unsorted parts of the array. We iterate through the entire array, at each iteration we iterate through the unsorted partition in order to find the minimal element and swap it with the current element in the iteration
 
+#### Analysis
+
+*Tip: There is 2-d nested for-loop, every element iteration requires a partial element iteration of the array*
+
+##### Best case: Ω(n<sup>2</sup>)
+
+Even if the entire array of n elements is sorted, we still have to parse the full unsorted array (n) on every iteration of the elements in the array (n).
+
+##### Average case: θ(n<sup>2</sup>)
+
+When the array is unsorted, the algorithm will compare every element in the unsorted portion (n) to every element in the array (n).
+
+##### Worst case: O(n<sup>2</sup>)
+
+see average case above.
+
 #### Pseudocode:
 
 ```pseudo
@@ -39,7 +55,23 @@ for each i-elem in the arr:
 
 ### Bubble Sort
 
-Bubble sort works by iterating through the array and in each iteration we compare every two adjacent elements and swap if the left element is larger than the right element
+Bubble sort works by iterating through the array and in each iteration we compare every two adjacent elements and swap if the left element is larger than the right element.
+
+#### Analysis
+
+*Tip: There is 2-d nested for-loop, every element iteration requires a partial element iteration of the array*
+
+##### Best case: Ω(n<sup>2</sup>)
+
+Even if the entire array of n elements is sorted, on each iteration of the elements (n), we still have to compare each element with its adjacent neighbor (n).
+
+##### Average case: θ(n<sup>2</sup>)
+
+When the array is unsorted, the algorithm will compare every element in the unsorted portion (n) to every element in the array (n).
+
+##### Worst case: O(n<sup>2</sup>)
+
+see average case above.
 
 #### Pseudocode:
 
