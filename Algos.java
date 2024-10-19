@@ -20,10 +20,15 @@ public class Algos {
     public static void bubbleSort(int[] arr) {
         printArray(arr);
         for (int i = 0; i < arr.length; ++i) {
+            boolean isSwapped = false;
             for (int j = 0; j < arr.length - i - 1; ++j) {
                 if (arr[j] > arr[j + 1]) {
                     swap(arr, j, j + 1);
+                    isSwapped = true;
                 }
+            }
+            if(!isSwapped) {
+                break;
             }
         }
         printArray(arr);
