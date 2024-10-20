@@ -9,7 +9,10 @@
    - [Bubble Sort](#bubble-sort)
    - [Insertion Sort](#insertion-sort)
 3. [Data Structures](#data-structures)
-   - (Add your data structures here)
+   - [ArrayList](#arraylist)
+   - [LinkedList](#linkedlist)
+   - [HashTable](#hashtable)
+   - [Trees](#trees)
 4. [Best, Average, and Worst Case Complexity](#complexity)
 
 ---
@@ -56,13 +59,13 @@ for each i-elem in the arr:
 #### Complexity:
 - Best case: Ω(n²)
 - Average case: θ(n²)
-- Worst case: O(n²)
+- Worst case: O(n)
 
 ---
 
 ### Insertion Sort
 
-Insertion sort partitions the array into sorted and unsorted sections. It inserts each unsorted element into its correct position within the sorted section.
+Insertion sort partitions the array into sorted and unsorted sections. It inserts each unsorted element into its correct position within the sorted section by shifting the elements larger than itself towards the right and inserting itself into the gap.
 
 #### Pseudocode:
 ```pseudo
@@ -77,7 +80,7 @@ for each i-elem in the arr:
 #### Complexity:
 - Best case: Ω(n)
 - Average case: θ(n²)
-- Worst case: O(n²)
+- Worst case: O(n)
 
 ---
 
