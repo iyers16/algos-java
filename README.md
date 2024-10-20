@@ -30,6 +30,7 @@ This repository contains notes and code implementations for various algorithms a
 Selection sort works by having a partition between the sorted and unsorted parts of the array. During each iteration, it finds the minimal element in the unsorted portion and swaps it with the first unsorted element.
 
 #### Pseudocode:
+
 ```pseudo
 for each i-elem in the arr:
     for each j-elem in the unsorted arr partition:
@@ -38,6 +39,7 @@ for each i-elem in the arr:
 ```
 
 #### Complexity:
+
 - Best case: Ω(n²)
 - Average case: θ(n²)
 - Worst case: O(n²)
@@ -49,6 +51,7 @@ for each i-elem in the arr:
 Bubble sort iterates through the array, comparing adjacent elements and swapping them if they are out of order. This process repeats until the array is sorted.
 
 #### Pseudocode:
+
 ```pseudo
 for each i-elem in the arr:
     for each j-elem in the arr:
@@ -57,6 +60,7 @@ for each i-elem in the arr:
 ```
 
 #### Complexity:
+
 - Best case: Ω(n²)
 - Average case: θ(n²)
 - Worst case: O(n)
@@ -68,6 +72,7 @@ for each i-elem in the arr:
 Insertion sort partitions the array into sorted and unsorted sections. It inserts each unsorted element into its correct position within the sorted section by shifting the elements larger than itself towards the right and inserting itself into the gap.
 
 #### Pseudocode:
+
 ```pseudo
 for each i-elem in the arr:
     for each j-elem in the sorted arr partition:
@@ -78,6 +83,7 @@ for each i-elem in the arr:
 ```
 
 #### Complexity:
+
 - Best case: Ω(n)
 - Average case: θ(n²)
 - Worst case: O(n)
