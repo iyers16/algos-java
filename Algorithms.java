@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.lang.reflect.Array;
 
 public class Algorithms {
     public static <T extends Comparable<? super T>> T[] selectionSort(T[] arr) {
@@ -43,5 +43,30 @@ public class Algorithms {
             arr[j] = current;
         }
         return arr;
+    }
+
+    public static <T extends Comparable<? super T>> T[] mergeSortedArrays(T[] a, T[] b, Integer sizeA, Integer sizeB) {
+        @SuppressWarnings("unchecked")
+        T[] c = (T[]) Array.newInstance(a.getClass().getComponentType(), sizeA + sizeB);
+
+        Integer ctrA, ctrB, ctrC;
+        ctrA = ctrB = ctrC = 0;
+
+        while (ctrA < sizeA && ctrB < sizeB) {
+            if (a[ctrA].compareTo(b[ctrB]) <= 0) {
+                c[ctrC++] = a[ctrA++];
+            } else {
+                c[ctrC++] = b[ctrB++];
+            }
+        }
+
+        while (ctrA < sizeA) {
+            c[ctrC++] = a[ctrA++];
+        }
+        while (ctrB < sizeB) {
+            c[ctrC++] = b[ctrB++];
+        }
+
+        return c;
     }
 }
