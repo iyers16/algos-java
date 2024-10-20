@@ -48,15 +48,15 @@ for each i-elem in the arr:
 
 ### Bubble Sort
 
-Bubble sort iterates through the array, comparing adjacent elements and swapping them if they are out of order. This process repeats until the array is sorted.
+Bubble sort iterates through the array, comparing adjacent elements and swapping them if they are out of order. This process repeats until the array is sorted. The outer loop ensures that all elements are accounted for. The inner loop ensures that the selected element can bubble up to it's full potential. An optimization in the outer can ensure that best-case performance stays at O(n) since if there are no swaps in a run-through, it follows that all elems are correctly sorted.
 
 #### Pseudocode:
 
 ```pseudo
 for each i-elem in the arr:
     for each j-elem in the arr:
-        if the j-elem is larger than the element to the right:
-            swap the i-elem and the j-elem
+        if the j-elem is larger than the the j+1-elem:
+            swap the j-elem and the j+1-elem
 ```
 
 #### Complexity:

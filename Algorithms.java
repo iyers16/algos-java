@@ -35,7 +35,7 @@ public class Algorithms {
 
     public static <T extends Comparable<? super T>> T[] insertionSort(T[] arr) {
         for (int i = 1; i < arr.length; ++i) {
-            int j;
+            int j = i;
             T current = arr[i];
             for (j = i; (j > 0) && (arr[j - 1].compareTo(current) > 0); --j) {
                 arr[j] = arr[j - 1];
