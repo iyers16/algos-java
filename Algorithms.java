@@ -45,7 +45,30 @@ public class Algorithms {
         return arr;
     }
 
-    public static <T extends Comparable<? super T>> T[] mergeSortedArrays(T[] a, T[] b, Integer sizeA, Integer sizeB) {
+    public static <T extends Comparable<? super T>> T[] mergeSort(T[] arr) {
+        return mergeSort(arr, 0, arr.length - 1);
+    }
+
+    public static <T extends Comparable<? super T>> T[] mergeSort(T[] arr, Integer leftIdx, Integer rightIdx) {
+        if (leftIdx == rightIdx) {
+            @SuppressWarnings("unchecked")
+            T[] singleElementArray = (T[]) Array.newInstance(arr.getClass().getComponentType(), 1);
+            singleElementArray[0] = arr[leftIdx];
+            return singleElementArray;
+        }
+
+        if (leftIdx.compareTo(rightIdx) < 0) {
+            Integer middleIdx = (leftIdx + rightIdx) / 2;
+            T[] a = mergeSort(arr, leftIdx, middleIdx);
+            T[] b = mergeSort(arr, middleIdx + 1, rightIdx);
+            return mergeSortedArrays(a, b);
+        }
+        return null;
+    }
+
+    public static <T extends Comparable<? super T>> T[] mergeSortedArrays(T[] a, T[] b) {
+        Integer sizeA = a.length;
+        Integer sizeB = b.length;
         @SuppressWarnings("unchecked")
         T[] c = (T[]) Array.newInstance(a.getClass().getComponentType(), sizeA + sizeB);
 
