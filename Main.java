@@ -7,9 +7,8 @@ public class Main {
         Integer[] unsortedArray = Stream.generate(() -> random.nextInt(101))
                 .limit(10)
                 .toArray(Integer[]::new);
-
-        // Algos.selectionSort(unsortedArray);
-        // Algos.bubbleSort(unsortedArray);
-        Algos.insertionSort(unsortedArray);
+        Utils.printArray(unsortedArray);
+        Integer[] sortedArray = Algorithms.insertionSort(unsortedArray);
+        Utils.printArray(sortedArray);
     }
 }

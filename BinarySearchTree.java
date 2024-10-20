@@ -1,5 +1,4 @@
 public class BinarySearchTree {
-    
 
     private static class BinaryNode<T> {
         T data = null;
